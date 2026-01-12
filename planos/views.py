@@ -1,9 +1,8 @@
 from django.shortcuts import render, redirect
 from .forms import CustomUserCreationForm
 
-# Esta é a função que o erro diz que está faltando
-def index(request):
-    return render(request, 'planos/index.html')
+def inicial(request):
+    return render(request, 'planos/inicial.html')
 
 def registrar(request):
     if request.method == 'POST':
