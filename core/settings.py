@@ -107,6 +107,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 INSTALLED_APPS += [
+    'widget_tweaks',
     'planos',
 ]
 
@@ -136,3 +137,6 @@ STATICFILES_DIRS = [
 TEMPLATES[0]['DIRS'] = [
     BASE_DIR / 'templates',
 ]
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = 'login'
