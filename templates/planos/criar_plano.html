@@ -1,0 +1,49 @@
+{% extends 'planos/base_dashboard.html' %}
+{% block content %}
+<div class="container-fluid">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 style="color: #2C3444; font-weight: 700;">Criar Novo Plano de Aula</h2>
+        <button type="button" id="btn-gerar-ia" class="btn shadow-sm rounded-pill px-4" 
+                style="background-color: #2C3444; color: white; font-weight: 600;">
+            <i class="bi bi-magic me-2"></i> Gerar com IA
+        </button>
+    </div>
+
+    <form method="post" class="bg-white p-4 rounded-4 shadow-sm">
+        {% csrf_token %}
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label class="form-label fw-bold">Título do Plano</label>
+                {{ form.titulo }}
+            </div>
+            <div class="col-md-3">
+                <label class="form-label fw-bold">Disciplina</label>
+                {{ form.fk_disciplina }}
+            </div>
+            <div class="col-md-3">
+                <label class="form-label fw-bold">Série</label>
+                {{ form.fk_serie }}
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label fw-bold">Tema da Aula</label>
+            {{ form.tema }}
+        </div>
+
+        <div class="mb-4">
+            <label class="form-label fw-bold">Conteúdo do Plano</label>
+            {{ form.conteudo|safe }}
+        </div>
+
+        <div class="d-flex justify-content-end">
+            <a href="{% url 'meus_planos' %}" class="btn btn-light rounded-pill me-2 px-4">Cancelar</a>
+            <button type="submit" class="btn btn-success rounded-pill px-4">Salvar Plano</button>
+        </div>
+    </form>
+</div>
+
+<style>
+    .note-editor { border-radius: 15px !important; overflow: hidden; }
+</style>
+{% endblock %}

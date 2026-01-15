@@ -10,4 +10,5 @@ urlpatterns = [
     path('signup/', views.registrar, name='signup'),
     path('meus-planos/', views.meus_planos, name='meus_planos'),
     path('modelos/', views.modelos_planos, name='modelos_planos'),
+    path('meus-planos/novo/', views.criar_plano, name='criar_plano'),
 ]
