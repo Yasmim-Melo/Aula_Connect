@@ -1,0 +1,32 @@
+{% extends 'planos/base_dashboard.html' %}
+{% block content %}
+<div class="container-fluid">
+    <div class="rounded-4 mb-4" style="background: linear-gradient(90deg, #e3f2fd, #bbdefb); height: 200px; position: relative; overflow: hidden;">
+        <img src="https://via.placeholder.com/800x200/2C3444/white?text=Planejamento+Inteligente" class="w-100 h-100 object-fit-cover opacity-25">
+        <button class="btn btn-sm btn-light position-absolute bottom-0 start-0 m-3"><i class="bi bi-image"></i> Editar Capa</button>
+    </div>
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h3>Planos de Aula</h3>
+        <div class="btn-group">
+            <button class="btn btn-outline-secondary btn-sm active">Todos os Planos</button>
+            <button class="btn btn-outline-secondary btn-sm">Ativos</button>
+        </div>
+    </div>
+
+    <div class="row">
+        {% for i in "1234" %}
+        <div class="col-md-3 mb-4">
+            <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+                <img src="https://via.placeholder.com/300x150" class="card-img-top">
+                <div class="card-body">
+                    <small class="text-muted">Última modificação: 2 horas</small>
+                    <h6 class="fw-bold mt-2">Língua Portuguesa - Figuras de Linguagem</h6>
+                    <button class="btn btn-outline-dark btn-sm w-100 mt-3 rounded-pill">Visualizar Plano</button>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

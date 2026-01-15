@@ -109,6 +109,7 @@ AUTH_PASSWORD_VALIDATORS = [
 INSTALLED_APPS += [
     'widget_tweaks',
     'planos',
+    'django_summernote',
 ]
 
 AUTH_USER_MODEL = 'planos.Usuario'
@@ -117,7 +118,7 @@ AUTH_USER_MODEL = 'planos.Usuario'
 # Internationalization
 # https://docs.djangoproject.com/en/6.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'pt-br'
 
 TIME_ZONE = 'UTC'
 
@@ -138,5 +139,5 @@ TEMPLATES[0]['DIRS'] = [
     BASE_DIR / 'templates',
 ]
 
-LOGIN_REDIRECT_URL = '/'
-LOGOUT_REDIRECT_URL = 'login'
+LOGIN_REDIRECT_URL = 'meus_planos'
+LOGOUT_REDIRECT_URL = 'inicial'
